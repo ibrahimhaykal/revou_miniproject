@@ -1,0 +1,124 @@
+hr {
+  border: 2px solid black;
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  font-family: "Arial", serif;
+}
+
+.header {
+  float: center;
+}
+/* Navbar */
+.navbar {
+  margin: 0 auto;
+  display: flex;
+  background-color: rgb(51, 51, 51);
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  padding-right: 10px;
+  border-bottom: 2px solid yellow;
+}
+
+.navbar-logo {
+  height: 6vh;
+  padding-left: 1vw;
+  padding-top: 0, 5vw;
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  padding-right: 20px;
+}
+
+.navbar-list a {
+  border-style: solid;
+  border-color: black;
+  border-width: 0.5px;
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+  padding-left: 15px;
+  padding-right: 20px;
+}
+
+.navbar-list :hover {
+  background-color: #111;
+  color: yellow;
+  border-radius: 6px;
+}
+
+/* Facilitation */
+#facilitation h1,
+.facil-block {
+  text-align: left;
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+}
+
+.facil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.facil-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+.facil-text {
+  text-align: center;
+}
+.profile-desc {
+  margin-top: 5px;
+  text-align: center;
+}
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+.section {
+  padding: 10px;
+}
+#home {
+  display: flex;
+  flex-direction: column;
+}
+#home > h1 {
+  font-size: 43px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.form-container {
+  display: flex;
+}
+
+.form-container form {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.form-container #hasil {
+  flex: 1;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}

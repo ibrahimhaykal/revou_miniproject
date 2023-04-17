@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="profile.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div>
+        <img class="navbar-logo" src="Logo-RevoU-5.png" alt="Logo-RevoU-5" />
+      </div>
+      <div>
+        <ul class="navbar-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Project </a></li>
+          <li><a href="#message-us">Contact </a></li>
+        </ul>
+      </div>
+    </nav>
+    <section id="about">
+      <div class="container">
+        <h1>Our Profile</h1>
+        <p>Hello, I am Bhukyasi. I am a web developer with a passion for creating user-friendly and visually appealing websites.</p>
+        <img src="Assets/profilepic.jpg" alt="Profile Picture " class="rounded-image"/>
+      </div>
+    </section>
+    <section id="skills">
+      <div class="container">
+        <h1>Skills</h1>
+        <div class="skill-img">
+          <img src="Assets/logo skill1.png" alt="html-css-js" />
+          <img src="Assets/logo skill2.png" alt="reactjs" />
+          <img src="Assets/logo skill3.png" alt="nodejs" />
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="container">
+        <h1>Projects</h1>
+        <ul>
+          <li>
+            <h2>Project 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus maximus lectus nec metus feugiat, eget ultricies ex accumsan. Integer dapibus ligula sed sem ullamcorper facilisis.</p>
+          </li>
+          <li>
+            <h2>Project 2</h2>
+            <p>Suspendisse aliquam neque eget nisl aliquam tincidunt. Cras et quam eget urna ultrices dignissim. Vivamus tincidunt facilisis turpis a lacinia.</p>
+          </li>
+        </ul>
+        <!-- Message Us -->
+ <section id="message-us">
+    <h1>Message Us</h1>
+    <div class="form-container">
+      <form>
+        <label for="nama">Nama:</label><br />
+        <input type="text" id="nama" name="nama" /><br /><br />
+
+        <label for="tanggal-lahir">Tanggal Lahir:</label><br />
+        <input type="date" id="tanggal-lahir" name="tanggal-lahir" /><br /><br />
+
+        <label for="jenis-kelamin">Jenis Kelamin:</label><br />
+        <input type="radio" id="jenis-kelamin-laki" name="jenis-kelamin" value="Laki-laki" />
+        <label for="jenis-kelamin-laki">Laki-laki</label><br />
+        <input type="radio" id="jenis-kelamin-perempuan" name="jenis-kelamin" value="Perempuan" />
+        <label for="jenis-kelamin-perempuan">Perempuan</label><br /><br />
+
+        <label for="pesan">Pesan:</label><br />
+        <textarea id="pesan" name="pesan" rows="4" cols="30"></textarea><br /><br />
+
+        <input type="button" value="Submit" onclick="submitForm()" />
+      </form>
+      <div id="hasil"></div>
+    </div>
+      </div>
+    </section>
+         <!-- javaScript -->
+        <script>
+            var userName = prompt("Please enter your name:");
+            {
+              if (userName !== null && userName.trim() !== "") {
+                alert("Hi " + userName + "! Welcome to our website!");
+                document.getElementById("welcomeText").textContent = "Welcome to our website, " + userName + "!";
+              }
+            }
+            function submitForm() {
+
+              var nama = document.getElementById("nama").value;
+  
+
+              var tanggalLahir = document.getElementById("tanggal-lahir").value;
+  
+
+              var jenisKelamin = document.querySelector('input[name="jenis-kelamin"]:checked');
+  
+
+              var pesan = document.getElementById("pesan").value;
+  
+
+              var currentTime = new Date();
+  
+              if (nama === "" || tanggalLahir === "" || !jenisKelamin || pesan === "") {
+                alert("Mohon lengkapi semua field form!");
+              } else {
+
+                document.getElementById("hasil").innerHTML =
+                  "Nama: " + nama + "<br>" + "Tanggal Lahir: " + tanggalLahir + "<br>" + "Jenis Kelamin: " + jenisKelamin.value + "<br>" + "Pesan: " + pesan + "<br>" + "Waktu saat ini: " + currentTime;
+              }
+            }
+          </script>
+        </div>
+    <footer>
+      <p style="text-align: center">&copy; 2023 ibrahim Haykal. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div>
+        <img class="navbar-logo" src="Logo-RevoU-5.png" alt="Logo-RevoU-5" />
+      </div>
+      <div>
+        <ul class="navbar-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="profile.html">Our Profile</a></li>
+          <li><a href="#">Achivement</a></li>
+          <li><a href="#message-us">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar END -->
+    <!-- Main -->
+    <div class="container">
+      <section id="home">
+        <h1 id="welcomeText">Hi, Welcome to our website!</h1>
+        <p>Ini adalah website latihan pertama</p>
+        <img class="banner img-slideshow" src="Assets/revou-banner.png" alt="revoU-banner" />
+        <img class="banner img-slideshow" src="Assets/RevoUBanner.jpg" alt="revoU-banner" />
+      </section>
+      <section id="facilitation">
+        <h1>Our Facilitation</h1>
+        <div class="facil">
+          <div>
+            <img class="profile-img" src="Assets/teacher.png" />
+            <p class="facil-text">Profesional Teacher</p>
+          </div>
+          <div>
+            <img class="profile-img" src="Assets/sportyield.jpg" />
+            <p class="facil-text">Sport Field</p>
+          </div>
+          <div>
+            <img class="profile-img" src="Assets/clasroom.jpg" />
+            <p class="facil-text">Classroom</p>
+          </div>
+        </div>
+      </section>
+      <!-- Message Us -->
+      <section id="message-us">
+        <h1>Message Us</h1>
+        <div class="form-container">
+          <form>
+            <label for="nama">Nama:</label><br />
+            <input type="text" id="nama" name="nama" /><br /><br />
+
+            <label for="tanggal-lahir">Tanggal Lahir:</label><br />
+            <input type="date" id="tanggal-lahir" name="tanggal-lahir" /><br /><br />
+
+            <label for="jenis-kelamin">Jenis Kelamin:</label><br />
+            <input type="radio" id="jenis-kelamin-laki" name="jenis-kelamin" value="Laki-laki" />
+            <label for="jenis-kelamin-laki">Laki-laki</label><br />
+            <input type="radio" id="jenis-kelamin-perempuan" name="jenis-kelamin" value="Perempuan" />
+            <label for="jenis-kelamin-perempuan">Perempuan</label><br /><br />
+
+            <label for="pesan">Pesan:</label><br />
+            <textarea id="pesan" name="pesan" rows="4" cols="30"></textarea><br /><br />
+
+            <input type="button" value="Submit" onclick="submitForm()" />
+          </form>
+          <div id="hasil"></div>
+        </div>
+        <!-- javaScript -->
+        <script>
+          var userName = prompt("Please enter your name:");
+          {
+            if (userName !== null && userName.trim() !== "") {
+              alert("Hi " + userName + "! Welcome to our website!");
+              document.getElementById("welcomeText").textContent = "Welcome to our website, " + userName + "!";
+            }
+          }
+          function submitForm() {
+            // Mendapatkan nilai dari field nama
+            var nama = document.getElementById("nama").value;
+
+            // Mendapatkan nilai dari field tanggal lahir
+            var tanggalLahir = document.getElementById("tanggal-lahir").value;
+
+            // Mendapatkan nilai dari field jenis kelamin
+            var jenisKelamin = document.querySelector('input[name="jenis-kelamin"]:checked');
+
+            // Mendapatkan nilai dari field pesan
+            var pesan = document.getElementById("pesan").value;
+
+            // Mendapatkan waktu saat ini
+            var currentTime = new Date();
+
+            // Validasi form sebelum submit
+            if (nama === "" || tanggalLahir === "" || !jenisKelamin || pesan === "") {
+              alert("Mohon lengkapi semua field form!");
+            } else {
+              // Menampilkan hasil di dalam elemen dengan id "hasil"
+              document.getElementById("hasil").innerHTML =
+                "Nama: " + nama + "<br>" + "Tanggal Lahir: " + tanggalLahir + "<br>" + "Jenis Kelamin: " + jenisKelamin.value + "<br>" + "Pesan: " + pesan + "<br>" + "Waktu saat ini: " + currentTime;
+            }
+          }
+        </script>
+      </section>
+    </div>
+    <h />
+    <footer>
+      <p style="text-align: center">&copy; 2023 ibrahim Haykal. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
